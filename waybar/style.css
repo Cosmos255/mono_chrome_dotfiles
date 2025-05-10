@@ -1,26 +1,39 @@
 * {
-  font-family: JetBrainsMono, FiraCode, monospace;
-  font-size: 13px;
-  color: #ffffff;
+  font-family: JetBrainsMono;
+  font-size: 10px;
+  color: white;
   background-color: #000000;
+  border:none;
 }
 
-window#waybar {
-  background-color: #000000;
-  border-bottom: 2px solid #ff0100;
+#waybar {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
 }
 
 #workspaces button {
-  padding: 0 8px;
+  padding: 0 0px;
   background: transparent;
-  color: #888888;
-  border: none;
+  color: white;
+  border-radius:3px;
+  margin: 0px 0px;
 }
 
 #workspaces button.active {
-  color: #ff0100;
+  color: red;
   font-weight: bold;
 }
+
+#workspaces button.focused {
+ color: red;
+}
+
+
+#workspaces button.hover {
+ color: red;
+}
+
 
 #window {
   color: #ff0100;
@@ -28,14 +41,15 @@ window#waybar {
 }
 
 #cpu, #memory, #network, #clock {
-  background-color: #1a1a1a;
   margin: 0 5px;
-  padding: 0 10px;
-  border-radius: 6px;
+  padding: 0 5px;
+  border-radius: 0px;
+  background: transparent;
   color: #ffffff;
 }
 
 #clock {
-  color: #ff0100;
+  color: #FFDE00;
+  margin-right:0px;
 }
 

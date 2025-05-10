@@ -1,43 +1,59 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "height": 24,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+
   "modules-left": ["hyprland/workspaces"],
- // "modules-center": ["window"],
-  "modules-right": ["cpu", "memory", "network", "clock"],
+  "modules-right": ["memory", "cpu", "clock"],
 
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
     "format-icons": {
       "1": "1", "2": "2", "3": "3", "4": "4", "5": "5"
+    },
+    "persistent-workspaces": {
+      "*": 5
     }
   },
 
   "window": {
-    "max-length": 50
+    "max-length": 150
   },
 
   "clock": {
-    "format": "󰅐  {:%H:%M}",
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "interval": 1,
     "tooltip": false
   },
 
   "cpu": {
-    "format": " {usage}%",
+    "format": "CPU: {usage}%",
     "tooltip": false
   },
 
   "memory": {
-    "format": " {used:0.1f}G",
+    "format": "{used:0.1f}GiB",
     "tooltip": false
   },
 
   "network": {
-    "format-wifi": "󰤨  {signalStrength}%",
-    "format-ethernet": "󰈁  wired",
-    "format-disconnected": "󰤮  none",
+    "format-wifi": "🛰️ {signalStrength}%",
+    "format-ethernet": "🖧 wired",
+    "format-disconnected": "󰤮 no net",
     "tooltip": false
-  }
+  },
+
+  "custom/volume": {
+  "format": "{text}",
+  "exec": "amixer get Master | awk -F'[][]' 'END { vol=$2; mute=$4; if (mute==\"off\") {print \"MUTE\"} else {print vol} }'",
+  "interval": 2,
+  "tooltip": false
+},
+
+
 }
 
