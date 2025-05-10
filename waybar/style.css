@@ -1,0 +1,41 @@
+* {
+  font-family: JetBrainsMono, FiraCode, monospace;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+window#waybar {
+  background-color: #000000;
+  border-bottom: 2px solid #ff0100;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  background: transparent;
+  color: #888888;
+  border: none;
+}
+
+#workspaces button.active {
+  color: #ff0100;
+  font-weight: bold;
+}
+
+#window {
+  color: #ff0100;
+  font-weight: bold;
+}
+
+#cpu, #memory, #network, #clock {
+  background-color: #1a1a1a;
+  margin: 0 5px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+#clock {
+  color: #ff0100;
+}
+
